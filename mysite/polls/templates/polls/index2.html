@@ -133,7 +133,7 @@
             
             
             $.ajax({
-            url: 'https://search-twitter-4gq7qku6bsxkouqneo3ktustqm.us-east-1.es.amazonaws.com/'+cand+'n/_search?source='+queryJson,
+            url: ''+queryJson,
             success: function(data) {
                 var cur_size = data['hits']['total'];
                 console.log(cur_size);
@@ -189,7 +189,7 @@
         attachGeofilter(map);
         
         $.ajax({
-            url: 'https://search-twitter-4gq7qku6bsxkouqneo3ktustqm.us-east-1.es.amazonaws.com/'+candidate+'n/_search?pretty&_source=coordinates,text,created_at&size=10000',
+            url: '',
             success: function(data) {
                 var cur_size = data['hits']['total'];
                 console.log(cur_size);
